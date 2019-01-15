@@ -51,7 +51,7 @@ public class DeployableArtifactoryServers {
         List<ServerConfigBean> serverConfigs = configPersistenceManager.getConfiguredServers();
 
         for (ServerConfigBean serverConfig : serverConfigs) {
-            deployableServerUrls.add(new DeployableServerId(serverConfig.getId(), serverConfig.getUrl()));
+            deployableServerUrls.add(new DeployableServerId(serverConfig.getId(), serverConfig.getUrl(), serverConfig.getUrlInfo()));
         }
         return deployableServerUrls;
     }

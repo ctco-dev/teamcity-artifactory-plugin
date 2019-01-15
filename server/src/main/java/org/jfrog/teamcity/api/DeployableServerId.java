@@ -24,10 +24,12 @@ public class DeployableServerId {
 
     private long id;
     private String url;
+    private String urlInfo;
 
-    public DeployableServerId(long id, String url) {
+    public DeployableServerId(long id, String url, String urlInfo) {
         this.id = id;
         this.url = url;
+        this.urlInfo = urlInfo;
     }
 
     public long getId() {
@@ -37,4 +39,9 @@ public class DeployableServerId {
     public String getUrl() {
         return url;
     }
+
+    public String getUrlInfo() {
+        return urlInfo;
+    }
+
 }

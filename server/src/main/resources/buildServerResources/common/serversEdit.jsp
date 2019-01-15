@@ -47,7 +47,7 @@
                     <c:set var="selected" value="true"/>
                 </c:if>
                 <props:option value="${deployableServerId.id}" selected="${selected}">
-                    <c:out value="${deployableServerId.url}"/>
+                    <c:out value="${deployableServerId.urlInfo}"/>
                 </props:option>
             </c:forEach>
         </props:selectProperty>

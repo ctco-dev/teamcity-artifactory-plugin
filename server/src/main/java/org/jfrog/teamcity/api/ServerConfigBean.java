@@ -46,6 +46,17 @@ public class ServerConfigBean {
         this.url = url;
     }
 
+    public String getUrlInfo() {
+        String deployer = defaultDeployerCredentials == null ? "" : defaultDeployerCredentials.getUsername() == null ? "" : defaultDeployerCredentials.getUsername();
+        if (useDifferentResolverCredentials) {
+            String resolver = defaultResolverCredentials == null ? "" : defaultResolverCredentials.getUsername();
+            return url + " (deployer=" + deployer + "; resolver=" + resolver + ")";
+        } else {
+            return url + " (deployer=" + deployer + ")";
+        }
+    }
+
+
     public CredentialsBean getDefaultDeployerCredentials() {
         return defaultDeployerCredentials;
     }

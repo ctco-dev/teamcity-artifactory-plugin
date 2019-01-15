@@ -250,7 +250,7 @@
                 </c:set>
                 <tr>
                     <td class="highlight" onclick="${onclick}">
-                        <c:out value="${server.url}"/>
+                        <c:out value="${server.urlInfo}"/>
                     </td>
                     <td class="edit highlight">
                         <a href="#" onclick="${onclick}; return false">edit</a>
